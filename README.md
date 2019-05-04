@@ -323,4 +323,4 @@ void BinaryTree<T>::postOrder(TreeNode * cur) {
 - Find the endpoint of a path quickly, and to move deeper into the tree as quickly as possible.
 - In other words, we visit the leaves as soon as possible. 
 
-![](img/tree_dfs.png){:height="50%" width="50%"}
+<img src="img/tree_dfs.png" width="50%">
