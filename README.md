@@ -2,14 +2,14 @@
 
 This is a study guide I created to help prepare for the scary CS225 final exam at U of I! This is by no means complete, I only included content that *I* found unfamiliar. 
 
-# Study Resources
+## Study Resources
 
 - [Lecture Slides (`/slides`)](/slides)
 - [Lecture Hangouts (`/handouts`)](/handouts)
 - [Lecture Code (`/code`)](/code)
 - [Lecture Notes by TAs (`/notes`)](/notes)
 
-# Final Exam Topics
+## Final Exam Topics
 
 - [C++ Basics](cpp.md)
 - [Abstract Data Types (ADT)](adt.md)
