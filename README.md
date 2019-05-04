@@ -330,8 +330,10 @@ void BinaryTree<T>::postOrder(TreeNode * cur) {
 - Everything to the left of root < root
 - Everything to the right of root > root
 
+### Find in BST
+
 ```cpp
-// Find in BST
+// Find
 
 TreeNode *& BST::_find(TreeNode *& root, const K & key) const {
      If (root == NULL || key == root->key) {
@@ -352,6 +354,6 @@ TreeNode *& BST::_find(TreeNode *& root, const K & key) const {
 2. Swap IOP and the node we want to delete.
 3. The node is now a leaf, so we can remove it.
 
-<img src="img/bst_remove_1.png" width="250px">
-<img src="img/bst_remove_2.png" width="250px">
-<img src="img/bst_remove_3.png" width="250px">
+<img src="img/bst_remove_1.png" width="250px" style="display: inline-block;">
+<img src="img/bst_remove_2.png" width="250px" style="display: inline-block;">
+<img src="img/bst_remove_3.png" width="250px" style="display: inline-block;">
