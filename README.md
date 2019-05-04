@@ -136,7 +136,7 @@ ADT describes functionality but not implementation details.
 
 ## List ADT
 
-![](img/linked_list.png){:height="50%" width="50%"}
+<img scr="img/linked_list.png" width="50%">
 
 |                              | Singly Linked List | ArrayList                             |
 | ---------------------------- | ------------------ | ------------------------------------- |
@@ -251,7 +251,7 @@ for (std::vector<Animal>::iterator it = zoo.begin(); it != zoo.end(); it++) {
 
 # Trees
 
-![](img/tree.png){:height="50%" width="50%"}
+<img scr="img/tree.png" width="50%">
 
 ## Binary Trees
 
@@ -316,7 +316,7 @@ void BinaryTree<T>::postOrder(TreeNode * cur) {
 - Visit nearby nodes quickly by each level.
 - In other words, visit the direct descendants quicker (level-order traversal).
 
-![](img/tree_bfs.png){:height="50%" width="50%"}
+<img scr="img/tree_bfs.png" width="50%">
 
 ### DFS
 
