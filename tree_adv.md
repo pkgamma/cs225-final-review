@@ -27,6 +27,10 @@ TreeNode *& BST::_find(TreeNode *& root, const K & key) const {
 
 ### Remove
 
+- No child: Just remove
+- 1 child: Swap with child then remove
+- 2 children: Swap with IOP then remove, like this:
+
 1. Find inorder predecessor (IOP), the largest node in the left subtree (the rightmost node).
 2. Swap IOP and the node we want to delete.
 3. The node is now a leaf, so we can remove it.
@@ -55,10 +59,45 @@ b = height(TR) - height(TL)
 
 ### BST Rotation
 
-- 4 kinds of rotation
+- 4 kinds of rotation (L, R, LR, RL)
+  - Simple rotations: **stick**
+  - Complex rotations: **elbow**
 - All rotations local
 - All rotations run in O(1)
 
+<img src="img/avl_rotate.jpg" width="500px">
+
 ## AVL Tree
 
-Self-balancing BST where the difference between heights of left and right subtrees cannot be more than 1.
+**Self-Balancing BST** where the difference between heights of left and right subtrees cannot be more than 1.
+
+To maintain height of tree:
+1. Check for imbalance.
+2. Correct it (do rotations).
+3. Update height.
+
+### Running Time
+
+- **O(lg(n))** for all operations.
+
+### Number of Rotations
+
+- Find: 0
+- Insert: up to 1 (L, R, LR, or RL)
+- Delete: up to h (O(lg(n)))
+
+## Red Black Tree
+
+- Almost the same as AVL Trees.
+- Maximal height is 2 * lg(n) = O(lg(n)).
+
+## Summary: Every Data Structure So Far
+
+| Worst runtime | Unsorted Array                      | Sorted Array               | Unsorted List    | Sorted List | Binary Tree (unsorted) | BST     | AVL     |
+| ------------- | ----------------------------------- | -------------------------- | ---------------- | ----------- | ---------------------- | ------- | ------- |
+| find          | O(n)                                | O(lg n) Binary search      | O(n)             | O(n)        | O(n)                   | O(h)<=n | O(lg n) |
+| insert        | O(1)* InsertEnd and resize properly | O(n) Shifting up to ½ data | O(1) InsertFront | O(n)        | O(1) Insert at root    | O(h)<=n | O(lg n) |
+| remove        | O(n)                                | O(n)                       | O(n)             | O(n)        | O(n)                   | O(h)<=n | O(lg n) |
+| traverse      | O(n)                                | O(n)                       | O(n)             | O(n)        | O(n)                   | O(n)    | O(n)    |
+
+*: amortized runtime

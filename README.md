@@ -24,6 +24,7 @@ This is a study guide I created to help prepare for the scary CS225 final exam a
 - [Tree Advanced](tree_adv.md)
   - BST Tree (Binary Search Tree)
   - AVL Tree
+  - Red Black Tree
 - kd-Tree
 - BTree
 - Hashing
