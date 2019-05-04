@@ -1,13 +1,10 @@
-
-# Tree Advanced
-
-## BST Tree (Binary Search Tree)
+# BST Tree (Binary Search Tree)
 
 Binary tree but
 - Everything to the left of root < root
 - Everything to the right of root > root
 
-### Find
+## Find
 
 ```cpp
 // Find
@@ -25,7 +22,7 @@ TreeNode *& BST::_find(TreeNode *& root, const K & key) const {
 }
 ```
 
-### Remove
+## Remove
 
 - No child: Just remove
 - 1 child: Swap with child then remove
@@ -39,7 +36,7 @@ TreeNode *& BST::_find(TreeNode *& root, const K & key) const {
 <img src="img/bst_remove_2.png" width="250px">
 <img src="img/bst_remove_3.png" width="250px"> -->
 
-### BST Analysis
+## BST Analysis
 
 | Operation | BST Average Case | BST Worst Case | Sorted Array                      | Sorted List              |
 | --------- | ---------------- | -------------- | --------------------------------- | ------------------------ |
@@ -48,7 +45,7 @@ TreeNode *& BST::_find(TreeNode *& root, const K & key) const {
 | delete    | O(lg n)          | O(h) <= O(n)   | O(n)                              | O(n)                     |
 | traverse  | O(n)             | O(n)           | O(n)                              | O(n)                     |
 
-### Balance Factor
+## Balance Factor
 
 b = height(TR) - height(TL)
 
@@ -57,7 +54,7 @@ b = height(TR) - height(TL)
 - balanced: if |b| <= 1
 - lowest point of imbalance: the deepest node in the tree that is out of balance
 
-### BST Rotation
+## BST Rotation
 
 - 4 kinds of rotation (L, R, LR, RL)
   - Simple rotations: **stick**
@@ -67,7 +64,7 @@ b = height(TR) - height(TL)
 
 <img src="img/avl_rotate.jpg" width="500px">
 
-## AVL Tree
+# AVL Tree
 
 **Self-Balancing BST** where the difference between heights of left and right subtrees cannot be more than 1.
 
@@ -76,22 +73,22 @@ To maintain height of tree:
 2. Correct it (do rotations).
 3. Update height.
 
-### Running Time
+## Running Time
 
 - **O(lg(n))** for all operations.
 
-### Number of Rotations
+## Number of Rotations
 
 - Find: 0
 - Insert: up to 1 (L, R, LR, or RL)
 - Delete: up to h (O(lg(n)))
 
-## Red Black Tree
+# Red Black Tree
 
 - Almost the same as AVL Trees.
 - Maximal height is 2 * lg(n) = O(lg(n)).
 
-## Summary: Every Data Structure So Far
+# Summary: Every Data Structure So Far
 
 | Worst runtime | Unsorted Array                      | Sorted Array               | Unsorted List    | Sorted List | Binary Tree (unsorted) | BST     | AVL     |
 | ------------- | ----------------------------------- | -------------------------- | ---------------- | ----------- | ---------------------- | ------- | ------- |

@@ -1,24 +1,22 @@
-# Trees Basics
-
-<img src="img/tree.png" width="50%">
-
-## Binary Trees
+# Binary Trees
 
 Each node has **at most** 2 children.
 
-### Full Tree
+## Full Tree
 
 Each node has either 2 or 0 children.
 
-### Perfect Tree
+## Perfect Tree
 
 Full tree + all leaves same distance from root.
 
-### Complete Tree
+## Complete Tree
 
 Full tree + perfect tree except last level, where all leaves are "pushed to the left."
 
-## Traversal
+<img src="img/tree.png" width="50%">
+
+# Traversal
 
 To **traverse** a tree means we process every element exactly once in a tree.
 
@@ -58,16 +56,16 @@ void BinaryTree<T>::postOrder(TreeNode * cur) {
 }
 ```
 
-## Search
+# Search
 
-### BFS
+## BFS
 
 - Visit nearby nodes quickly by each level.
 - In other words, visit the direct descendants quicker (level-order traversal).
 
 <img src="img/tree_bfs.png" width="50%">
 
-### DFS
+## DFS
 
 - Find the endpoint of a path quickly, and to move deeper into the tree as quickly as possible.
 - In other words, we visit the leaves as soon as possible. 

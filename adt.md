@@ -1,8 +1,8 @@
-# Abstract Data Types (ADT)
+# List ADT
+
+## Abstract Data Types (ADT) 
 
 ADT describes functionality but not implementation details.
-
-## List ADT
 
 <img src="img/linked_list.png" width="50%">
 
@@ -14,7 +14,7 @@ ADT describes functionality but not implementation details.
 | Insert an arbitrary element  | O(n)               | O(n)                                  |
 | Remove at arbitrary location | O(n)               | O(n)                                  |
 
-### Linked List
+## Linked List
 
 ```cpp
 // Implementation
@@ -88,21 +88,21 @@ void List<T>::insert(const T & t, unsigned index) {
 }
 ```
 
-## Stack
+# Stack
 
 Like dining hall plates.
 
 - push
 - pop
 
-## Queue 
+# Queue 
 
 Like a line is Disneyland.
 
 - enqueue
 - dequeue
 
-## Iterator (on List)
+# Iterator (on List)
 
 To implement an iterator, must have
 - `begin()`
