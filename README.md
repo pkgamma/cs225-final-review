@@ -21,7 +21,7 @@ This is a study guide I created to help prepare for the scary CS225 final exam a
   - Binary Tree
   - Traversal
   - Search
-  - BST Binary Search Tree
+  - BST Tree (Binary Search Tree)
   - AVL Tree
 - kd-Tree
 - BTree
@@ -324,3 +324,34 @@ void BinaryTree<T>::postOrder(TreeNode * cur) {
 - In other words, we visit the leaves as soon as possible. 
 
 <img src="img/tree_dfs.png" width="50%">
+
+## BST Tree (Binary Search Tree)
+
+- Everything to the left of root < root
+- Everything to the right of root > root
+
+```cpp
+// Find in BST
+
+TreeNode *& BST::_find(TreeNode *& root, const K & key) const {
+     If (root == NULL || key == root->key) {
+          return root;  //root is null when we cannot find
+     }
+     If (key < root->key) {
+          return _find(root->left, key);
+     }
+     If (key > root->key) {
+          return _find(root->right, key);
+     }
+}
+```
+
+### Remove in BST
+
+1. Find inorder predecessor (IOP), the largest node in the left subtree (the rightmost node).
+2. Swap IOP and the node we want to delete.
+3. The node is now a leaf, so we can remove it.
+
+<img src="img/bst_remove_1.png" width="250px">
+<img src="img/bst_remove_2.png" width="250px">
+<img src="img/bst_remove_3.png" width="250px">
