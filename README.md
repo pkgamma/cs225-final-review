@@ -16,20 +16,17 @@ This is a study guide I created to help prepare for the scary CS225 final exam a
   - List ADT
   - Stack ADT
   - Queue ADT
+  - Binary Tree ADT
   - Iterator
-- [Tree Basics](tree_basics.md)
-  - Binary Tree
   - Traversal
   - Search
-- [Tree Advanced](tree_adv.md)
-  - BST Tree (Binary Search Tree)
-  - AVL Tree
-  - Red Black Tree
-- [kd-Tree](kdtree.md)
-- BTree
-- Hashing
-- Heaps
-- Disjoint Sets
+- Trees
+  - [BST, AVL, Red Black Tree](tree_BST_AVL_RBT.md)
+  - [k-d Tree](tree_kd.md)
+  - [B Tree](tree_b.md)
+- [Hashing](hash.md)
+- [Heaps (Priority Queues)](heaps.md)
+- [Disjoint Sets](d_sets.md)
 - Graphs
 - Minimum Spanning Tree (MST)
 - Prim's MST

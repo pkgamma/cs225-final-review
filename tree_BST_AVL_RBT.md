@@ -9,7 +9,7 @@ Binary tree but
 ```cpp
 // Find
 
-TreeNode *& BST::_find(TreeNode *& root, const K & key) const {
+TreeNode *& _find(TreeNode *& root, const K & key) const {
      If (root == NULL || key == root->key) {
           return root;  //root is null when we cannot find
      }
