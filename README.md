@@ -885,3 +885,55 @@ void heapifyDown(idx) {
 
 # Disjoint Sets
 
+```cpp
+void DisjointSets::addelements(int num) {
+    for (int i = 0; i < num; i++) {
+        elems.push_back(-1);
+    }
+}
+```
+
+```cpp
+int DisjointSets::find(int elem) {
+    if (elems[elem] < 0) {
+        return elem;
+    } else {
+        return find(elems[elem]);
+    }
+}
+```
+
+```cpp
+void DisjointSets::setunion(int a, int b) {
+    int a_root = find(a);
+    int b_root = find(b);
+    int size = elems[a_root] + elems[b_root];
+
+    if (elems[a_root] <= elems[b_root]) {
+        elems[b_root] = a_root;
+        elems[a_root] = size;
+    } else {
+        elems[a_root] = b_root;
+        elems[b_root] = size;
+    }
+}
+```
+
+```cpp
+int DisjointSets::size(int elem) {
+    if (elem >= (int)elems.size() || elem < 0) {
+        return 0;
+    } else {
+        return elems[find(elem)] * -1;
+    }
+}
+```
+
+# Graphs
+
+# Minimum Spanning Tree (MST)
+  - Kruskal's MST
+  - Prim's MST
+  - Dijkstra's MST (SSSP, Single Source Shortest Path)
+
+All Pairs Shortest Path (APSP)
