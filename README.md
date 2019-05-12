@@ -12,13 +12,13 @@ This is a study guide I created to help prepare for the scary CS225 final exam a
 ## Final Exam Topics
 
 - [C++ Basics](cpp.md)
-- List ADT
-- Stack ADT
-- Queue ADT
-- Binary Tree ADT
-- Iterator
-- Traversal
-- Search
+- List
+  - Iterator
+- Stack
+- Queue
+- Binary Tree
+  - Traversal
+  - Search
 - BST, AVL, Red Black Tree
 - k-d Tree
 - B Tree
@@ -26,11 +26,10 @@ This is a study guide I created to help prepare for the scary CS225 final exam a
 - Heaps (Priority Queues)
 - Disjoint Sets
 - Graphs
-- Minimum Spanning Tree (MST)
-  - Kruskal's MST
+  - Kruskal's MST (Minimum Spanning Tree)
   - Prim's MST
-  - Dijkstra's MST (SSSP, Single Source Shortest Path)
-- All Pairs Shortest Path (APSP)
+  - Dijkstra's SSSP (Single Source Shortest Path)
+  - Floyd-Warshall's APSP (All Pairs Shortest Path)
 
 # C++ Basics
 
@@ -128,7 +127,7 @@ T maximum(T a, T b) {
 }
 ```
 
-# List ADT
+# List
 
 ## Abstract Data Types (ADT) 
 
@@ -205,6 +204,21 @@ void nsert(const T & t, unsigned index) {
 }
 ```
 
+## Iterator on List
+
+To implement an iterator, must have
+- `begin()`
+- `end()`
+- `operator++`
+- `operator*`
+- `operator!=`
+
+```cpp
+for (std::vector<Animal>::iterator it = zoo.begin(); it != zoo.end(); it++) {
+  std::cout << (*it).name << " " << (*it).food << std::endl;
+}
+```
+
 |                              | Singly Linked List | ArrayList                             |
 | ---------------------------- | ------------------ | ------------------------------------- |
 | Insert/Remove at Front       | O(1)               | O(1) (amortized)                      |
@@ -227,7 +241,7 @@ Like a line is Disneyland.
 - enqueue
 - dequeue
 
-# Binary Trees ADT
+# Binary Trees
 
 Each node has **at most** 2 children.
 
@@ -244,21 +258,6 @@ Full tree + all leaves same distance from root.
 Full tree + perfect tree except last level, where all leaves are "pushed to the left."
 
 <img src="img/tree.png" width="50%">
-
-# Iterator (on List)
-
-To implement an iterator, must have
-- `begin()`
-- `end()`
-- `operator++`
-- `operator*`
-- `operator!=`
-
-```cpp
-for (std::vector<Animal>::iterator it = zoo.begin(); it != zoo.end(); it++) {
-  std::cout << (*it).name << " " << (*it).food << std::endl;
-}
-```
 
 # Traversal (on Tree)
 
@@ -931,9 +930,7 @@ int DisjointSets::size(int elem) {
 
 # Graphs
 
-# Minimum Spanning Tree (MST)
-  - Kruskal's MST
-  - Prim's MST
-  - Dijkstra's MST (SSSP, Single Source Shortest Path)
-
-All Pairs Shortest Path (APSP)
+## Kruskal's MST (Minimum Spanning Tree)
+## Prim's MST
+## Dijkstra's SSSP (Single Source Shortest Path)
+## Floyd-Warshall's APSP (All Pairs Shortest Path)
