@@ -8,24 +8,26 @@ This is a study guide I created to help prepare for the scary CS225 final exam a
 - [Lecture Hangouts (`/handouts`)](/handouts)
 - [Lecture Code (`/code`)](/code)
 - [Lecture Notes by TAs (`/notes`)](/notes)
+- [Spring 2019 Course Website (Cloned Copy)](https://pkgamma.github.io/cs225-site-clone-sp19/)
 
 ## Final Exam Topics
 
-- [C++ Basics](cpp.md)
-- List
+- [C++ Basics](#c++-basics)
+- [List](#list)
   - Iterator
-- Stack
-- Queue
-- Binary Tree
+- [Stack](#stack)
+- [Queue](#queue)
+- [Binary Tree](#binary-trees)
   - Traversal
   - Search
-- BST, AVL, Red Black Tree
-- k-d Tree
-- B Tree
-- Hashing
-- Heaps (Priority Queues)
-- Disjoint Sets
-- Graphs
+- [BST Tree (Binary Search Tree)](#bst-tree-binary-search-tree)
+- [AVL Tree](#avl-tree)
+- [k-d Tree](#k-d-tree)
+- [B Tree](#b-tree-of-order-m)
+- [Hashing](#hashing)
+- [Heaps (Priority Queues)](#heaps-priority-queues)
+- [Disjoint Sets](#disjoint-sets)
+- [Graphs](#graphs)
   - Kruskal's MST (Minimum Spanning Tree)
   - Prim's MST
   - Dijkstra's SSSP (Single Source Shortest Path)
@@ -967,7 +969,7 @@ KruskalMST(G):
      return T
 ```
 
-## Prim's MST
+## Prim's MST (Minimum Spanning Tree)
 
 ```
 PrimMST(G, s):
