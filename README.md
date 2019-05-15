@@ -930,7 +930,92 @@ int DisjointSets::size(int elem) {
 
 # Graphs
 
+## Implementations
+
+- Edge List
+  - Vertex collection: Use a hash table (find/remove/insert will be O(1)).
+  - Edge collections: Use a linked list (hash table is not good because we have many collisions (no random distribution, violates SUHA) )
+
+- Adjacency Matrix
+  - Maintain a hash table of vertices and a list of edges.
+  - Add an nn matrix → store a pointer to the edge in edge list for every index in the matrix where the two vertices are adjacent.
+
+- ADJ List
+  - We will maintain a hash table of vertices, and every vertex in the table has a linked list of pointers which point to edges in the edge list.
+  - Elements from the edge list will point back to the hash table.
+
 ## Kruskal's MST (Minimum Spanning Tree)
+
+```
+KruskalMST(G):
+     DisjointSets forest
+     foreach (Vertex v : G):
+          forest.makeSet(v)
+
+     PriorityQueue Q    // min edge weight
+     foreach (Edge e : G):
+          Q.insert(e)
+
+     Graph T = (V, {})
+
+     while |T.edges()| < n-1:
+          Vertex (u, v) = Q.removeMin()
+          if forest.find(u) != forest.find(v):
+               T.addEdge(u, v)
+               forest.union( forest.find(u),
+                                    forest.find(v) )
+     return T
+```
+
 ## Prim's MST
+
+```
+PrimMST(G, s):
+  Input: G, Graph;
+         s, vertex in G, starting vertex
+  Output: T, a minimum spanning tree (MST) of G
+
+  foreach (Vertex v : G):  
+    d[v] = +inf
+    p[v] = NULL
+  d[s] = 0
+
+  PriorityQueue Q   // min distance, defined by d[v]
+  Q.buildHeap(G.vertices())
+  Graph T           // "labeled set"
+
+  repeat n times:
+    Vertex m = Q.removeMin()
+    T.add(m)
+    foreach (Vertex v : neighbors of m not in T):
+      if cost(v, m) < d[v]:
+        d[v] = cost(v, m)
+        p[v] = m
+
+  return T
+```
+
 ## Dijkstra's SSSP (Single Source Shortest Path)
+
+```
+Dijkstra(Graph, source, destination):
+
+  initialize distances  // initialize tentative distance value
+  initialize previous   // initialize a map that maps current node -> its previous node
+  initialize priority_queue   // initialize the priority queue
+  initialize visited
+
+  while the top of priority_queue is not destination:
+      get the current_node from priority_queue
+      for neighbor in current_node's neighbors and not in visited:
+          if update its neighbor's distances:
+              previous[neighbor] = current_node
+      save current_node into visited
+
+  extract path from previous
+  return path and distance
+```
+
 ## Floyd-Warshall's APSP (All Pairs Shortest Path)
+
+Floyd-Warshall’s Algorithm solves the problem Dijkstra's algorithm has with negative edges.
